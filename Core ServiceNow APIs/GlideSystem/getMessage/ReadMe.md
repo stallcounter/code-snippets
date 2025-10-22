@@ -14,3 +14,11 @@ You can see that {0} and {1} have been switched over, so Chuck points out that c
 Using the array of variables is a neat solution to translation, and even without translation, it can look nicer.
 
 You can also use gs.getMessage() with your own ui messages so you don't need to type out long log messages.
+
+You can create a record in the sys_ui_message table where:
+key = msg
+message = something really really super long and rambling that could even have some variable substitions in using {0} notation and counting up like this {1}
+
+You can go for gs.addInfoMessage(gs.getMessage("msg")) and print out your long log message without spoiling your clean code. This is most appropriate for user facing messages, rather than messages that will keep your code readable!
+
+If variables are not substituted in, then the curly bracket notation will be printed instead.
